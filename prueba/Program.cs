@@ -59,9 +59,11 @@
             else
             {
                 List<int> edadPmenores = new List<int>();
+                List<int> edadGen = new List<int>();
                 List<int> edadPmayores = new List<int>();
                 List<string> NombrePmayores = new List<string>();
                 List<string> NombrePmenores = new List<string>();
+                List<string> NombreGen = new List<string>();
 
                 for (int i = 1; i <= CantidadPersonas; i++)
                 {
@@ -83,6 +85,9 @@
                         }
                     } while (!Comp);
 
+                    edadGen.Add(edadP);
+                    NombreGen.Add(Nombrepersona);
+
                     if (edadP < 18)
                     {
 
@@ -97,6 +102,15 @@
                         NombrePmayores.Add(Nombrepersona);
 
                     }
+
+                }
+
+                Console.WriteLine("Nombre y edades de la lista general");
+
+                for (int i = 0; i < edadGen.Count; i++)
+                {
+
+                    Console.WriteLine(NombreGen[i] + " ----> " + edadGen[i]);
 
                 }
 
